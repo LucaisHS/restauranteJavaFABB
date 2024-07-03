@@ -2,7 +2,7 @@
 //
 //import restaurante.com.example.restauranteJava.entities.cidade.Cidade;
 //import restaurante.com.example.restauranteJava.entities.cozinha.Cozinha;
-//import restaurante.com.example.restauranteJava.entities.endereco.Endereco;
+//import restaurante.com.example.restauranteJava.entities.endereco.EnderecoRepository;
 //import restaurante.com.example.restauranteJava.entities.estado.Estado;
 //import restaurante.com.example.restauranteJava.entities.formaPagamento.FormaPagamento;
 //import restaurante.com.example.restauranteJava.entities.grupo.Grupo;
@@ -34,10 +34,10 @@
 //        // cidades e enderecos
 //        Cidade jundiai = new Cidade("jundiai", Estado.SP);
 //        Cidade varzea = new Cidade("Várzea Paulista", Estado.SP);
-//        Endereco end_restaurante1 = new Endereco("13207-771", "logradouro1", "123", "perto do terminal", "centro", jundiai);
-//        Endereco end_restaurante2 = new Endereco("13455-445", "logradouro2", "456", "praca alimentacao Shopping", "medeiros", varzea);
-//        Endereco end_cliente1 = new Endereco("11111-111", "logradouro3", "789", "casa com bananeira na frente", "jardim dos vales", jundiai);
-//        Endereco end_cliente2 = new Endereco("22222-222", "logradouro4", "101", "portão azul", "vila tupi", varzea);
+//        EnderecoRepository end_restaurante1 = new EnderecoRepository("13207-771", "logradouro1", "123", "perto do terminal", "centro", jundiai);
+//        EnderecoRepository end_restaurante2 = new EnderecoRepository("13455-445", "logradouro2", "456", "praca alimentacao Shopping", "medeiros", varzea);
+//        EnderecoRepository end_cliente1 = new EnderecoRepository("11111-111", "logradouro3", "789", "casa com bananeira na frente", "jardim dos vales", jundiai);
+//        EnderecoRepository end_cliente2 = new EnderecoRepository("22222-222", "logradouro4", "101", "portão azul", "vila tupi", varzea);
 //
 //        // permissoes & grupos
 //        Permissao permissao_dono = new Permissao("dono", "poder total");

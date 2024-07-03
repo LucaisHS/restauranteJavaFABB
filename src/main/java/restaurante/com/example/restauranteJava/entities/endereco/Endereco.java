@@ -2,6 +2,7 @@ package restaurante.com.example.restauranteJava.entities.endereco;
 
 import jakarta.persistence.*;
 import lombok.*;
+import restaurante.com.example.restauranteJava.dtos.EnderecoDTO;
 import restaurante.com.example.restauranteJava.entities.cidade.Cidade;
 
 import java.util.UUID;
@@ -25,5 +26,13 @@ public class Endereco {
 
     @OneToOne
     private Cidade cidade;
+
+    public Endereco(EnderecoDTO data){
+        this.cep = data.cep();
+        this.logradouro = data.logradouro();
+        this.numero = data.numero();
+        this.complemento = data.complemento();
+        this.bairro = data.bairro();
+    }
 
 }
