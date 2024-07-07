@@ -1,10 +1,23 @@
 package restaurante.com.example.restauranteJava.entities.produto;
 
 
-import lombok.ToString;
+import jakarta.persistence.*;
+import lombok.*;
+import restaurante.com.example.restauranteJava.dtos.FotoProdutoDTO;
+
+import java.util.UUID;
 
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Entity(name = "fotoProduto")
+@Table(name = "fotoProduto")
 public class FotoProduto {
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
     private String nome;
     private String descricao;
     private String contentType;
@@ -20,5 +33,12 @@ public class FotoProduto {
     private void calculaTamanho() {
         //
         this.tamanho = 124L;
+    }
+
+    public FotoProduto(FotoProdutoDTO data){
+        this.nome = data.nome();
+        this.descricao = data.descricao();
+        this.contentType = data.contentType();
+        this.tamanho = data.tamanho();
     }
 }
