@@ -31,4 +31,8 @@ public class FotoProdutoService {
     public List<FotoProduto> getAllFotoProduto(){
         return repository.findAll();
     }
+
+    public List<FotoProduto> getAllFotoProdutoByProdutoId(UUID id) throws Exception {
+        return repository.findAllByProduto_Id(id).orElseThrow(() -> new Exception("nenhuma foto com o id especificado na função"));
+    }
 }

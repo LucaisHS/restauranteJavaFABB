@@ -10,7 +10,7 @@
 //import restaurante.com.example.restauranteJava.entities.pedido.Pedido;
 //import restaurante.com.example.restauranteJava.entities.permissao.Permissao;
 //import restaurante.com.example.restauranteJava.entities.produto.FotoProduto;
-//import restaurante.com.example.restauranteJava.entities.produto.Produto;
+//import restaurante.com.example.restauranteJava.entities.produto.ProdutoDTO;
 //import restaurante.com.example.restauranteJava.entities.restaurante.Restaurante;
 //import restaurante.com.example.restauranteJava.entities.usuario.Usuario;
 //
@@ -68,14 +68,14 @@
 //        BigDecimal precoFrete = new BigDecimal("10");
 //        BigDecimal frete = new BigDecimal("9.90");
 //
-//        // Produto
+//        // ProdutoDTO
 //        FotoProduto foto1 = new FotoProduto("sushi", "foto sushi", "linkImg");
-//        Produto sushi = new Produto("Sushi", "Delicioso sushi", precoSushi, true, foto1);
+//        ProdutoDTO sushi = new ProdutoDTO("Sushi", "Delicioso sushi", precoSushi, true, foto1);
 //        FotoProduto foto2 = new FotoProduto("picanha", "foto picanha", "linkImg");
-//        Produto picanha = new Produto("Picanha", "Deliciosa picanha", precoPicanha, true, foto2);
-//        List<Produto> produtosLoja1 = new ArrayList<Produto>();
+//        ProdutoDTO picanha = new ProdutoDTO("Picanha", "Deliciosa picanha", precoPicanha, true, foto2);
+//        List<ProdutoDTO> produtosLoja1 = new ArrayList<ProdutoDTO>();
 //        produtosLoja1.add(sushi);
-//        List<Produto> produtosLoja2 = new ArrayList<Produto>();
+//        List<ProdutoDTO> produtosLoja2 = new ArrayList<ProdutoDTO>();
 //        produtosLoja2.add(picanha);
 //
 //        // Restaurante

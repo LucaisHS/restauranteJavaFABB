@@ -1,6 +1,7 @@
 package restaurante.com.example.restauranteJava.entities.produto;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import restaurante.com.example.restauranteJava.dtos.FotoProdutoDTO;
@@ -22,6 +23,11 @@ public class FotoProduto {
     private String descricao;
     private String contentType;
     private Long tamanho;
+
+    @ManyToOne
+    @JoinColumn(name = "produto_id")
+    @JsonManagedReference
+    private Produto produto;
 
     public FotoProduto(String nome, String descricao, String contentType){
         this.nome = nome;

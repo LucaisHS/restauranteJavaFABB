@@ -1,4 +1,6 @@
 package restaurante.com.example.restauranteJava.dtos;
 
-public record FotoProdutoDTO(String nome, String descricao, String contentType, Long tamanho) {
+import java.util.UUID;
+
+public record FotoProdutoDTO(UUID id, String nome, String descricao, String contentType, Long tamanho) {
 }
