@@ -25,8 +25,8 @@ public class FotoProduto {
     private Long tamanho;
 
     @ManyToOne
-    @JoinColumn(name = "produto_id")
     @JsonManagedReference
+    @JoinColumn(name = "produto_id", columnDefinition = "BINARY(16)")
     private Produto produto;
 
     public FotoProduto(String nome, String descricao, String contentType){

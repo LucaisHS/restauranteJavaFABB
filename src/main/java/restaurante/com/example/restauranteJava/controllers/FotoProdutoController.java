@@ -9,15 +9,17 @@ import restaurante.com.example.restauranteJava.entities.produto.FotoProduto;
 import restaurante.com.example.restauranteJava.service.FotoProdutoService;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/fotoProduto")
 public class FotoProdutoController {
+
     @Autowired
     private FotoProdutoService service;
 
     @PostMapping
-    public ResponseEntity<FotoProduto> criarFotoProduto(@RequestBody FotoProdutoDTO data){
+    public ResponseEntity<FotoProduto> criarFotoProduto(@RequestBody FotoProdutoDTO data) throws Exception {
         FotoProduto fotoProduto = service.createFotoProduto(data);
         return new ResponseEntity<>(fotoProduto, HttpStatus.CREATED);
     }
@@ -25,6 +27,13 @@ public class FotoProdutoController {
     @GetMapping
     public ResponseEntity<List<FotoProduto>> getAllFotoProdutos(){
         List<FotoProduto> fotos = service.getAllFotoProduto();
+        fotos.stream().forEach(x -> x.setProduto(null));
         return new ResponseEntity<>(fotos, HttpStatus.OK);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Void> deleteFotoProdutoById(@PathVariable UUID id) throws Exception {
+        this.service.deleteFotoProdutoById(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

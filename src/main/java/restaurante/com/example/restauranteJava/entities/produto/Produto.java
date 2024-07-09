@@ -1,5 +1,6 @@
 package restaurante.com.example.restauranteJava.entities.produto;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
@@ -31,6 +32,7 @@ public class Produto {
 
     @OneToMany(mappedBy = "produto", cascade = CascadeType.ALL)
     @JsonManagedReference
+    @JsonBackReference
     private List<FotoProduto> foto;
 
     public Produto(ProdutoDTO data){
