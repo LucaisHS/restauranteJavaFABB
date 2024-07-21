@@ -35,7 +35,7 @@ public class ProdutoController {
                 throw new RuntimeException(e);
             }
         });
-        Produto produto = produtoService.createProduto(data, fotos);
+        Produto produto = produtoService.createProduto(data, fotos); // aqui
         return new ResponseEntity<>(produto, HttpStatus.CREATED);
     }
 
@@ -43,7 +43,12 @@ public class ProdutoController {
     @GetMapping
     public ResponseEntity<List<Produto>> getAllProdutos(){
         List<Produto> produtos = produtoService.getAllProdutos();
-        System.out.println(produtos.get(0));
+        //produtos.stream().forEach(x -> x.setFoto(null));
+
+        //System.out.println(produtos.get(0));
+
+
+
         return new ResponseEntity<>(produtos, HttpStatus.OK);
     }
 

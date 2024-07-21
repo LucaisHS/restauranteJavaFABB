@@ -32,7 +32,6 @@ public class Produto {
 
     @OneToMany(mappedBy = "produto", cascade = CascadeType.ALL)
     @JsonManagedReference
-    @JsonBackReference
     private List<FotoProduto> foto;
 
     public Produto(ProdutoDTO data){

@@ -27,7 +27,7 @@ public class FotoProdutoController {
     @GetMapping
     public ResponseEntity<List<FotoProduto>> getAllFotoProdutos(){
         List<FotoProduto> fotos = service.getAllFotoProduto();
-        fotos.stream().forEach(x -> x.setProduto(null));
+        //fotos.stream().forEach(x -> x.setProduto(null));
         return new ResponseEntity<>(fotos, HttpStatus.OK);
     }
 

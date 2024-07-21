@@ -13,7 +13,8 @@ public interface ProdutoRepository extends JpaRepository<Produto, UUID> {
     @EntityGraph(attributePaths = {"foto"})
     Optional<Produto> findProdutoById(UUID id);
 
-    @Query("SELECT p FROM produto p LEFT JOIN FETCH p.foto")
+//    @Query("SELECT p FROM produto p LEFT JOIN FETCH p.foto")
     List<Produto> findAll();
     Optional<Produto> findProdutoByNome(String nome);
+
 }
